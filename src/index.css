@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 
-:root {
+body {
   /*Light Mode*/
   --btn: #0079ff;
   --background-color: #697c9a;
@@ -8,6 +8,8 @@
   --dark-text: #2b3442;
   --background-card: #fefefe;
   --background-color-gray: #f6f8ff;
+  --text-hover: #000;
+  --text-logo: #000;
   /*Dark Mode*/
   --white: #ffffff;
   --background-dark: #141d2f;
@@ -19,4 +21,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body.dark-mode{
+  --btn: #0079ff;
+  --background-color: #141d2f;
+  --text: #ffffff;
+  --dark-text: #ffffff;
+  --background-card: #1e2a47;
+  --background-color-gray: #141d2f;
+  --text-hover: #697c9a;
+  --text-logo: #ffffff;
 }

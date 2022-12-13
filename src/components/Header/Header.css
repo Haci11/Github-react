@@ -7,8 +7,9 @@
 }
 .container h1{
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    color:var(--text-logo);
 }
-.mode-btn-container{
+.mode-btn{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,13 +18,16 @@
     color: var(--text);
     cursor: pointer;
 }
-.mode-btn-container p{
+.mode-btn:hover{
+    color: var(--text-hover);
+}
+.mode-btn p{
     letter-spacing: 2.5px;
     margin-right: 18px;
     font-size: 12px;
     font-weight: 700;
+    text-transform: uppercase;
 }
-
 /* responsive */
 
 /* TABLET (768px) */
