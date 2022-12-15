@@ -21,8 +21,27 @@ const Searchbar = ({ saveData }) => {
       setError(true);
     } else {
       setError(false);
-      console.log(data);
-      saveData(data);
+      const date = new Date(data.created_at);
+      const formattedDate = date.toLocaleDateString("en-Gb", {
+        day: "numeric",
+        month: "short",
+        year: "numeric",
+      });
+      let dataObj = {
+        img: data.avatar_url,
+        name: data.name,
+        joined: formattedDate,
+        login: data.login,
+        bio: data.bio,
+        repo: data.public_repos,
+        followers: data.followers,
+        following: data.following,
+        location: data.location,
+        twitter: data.twitter_username,
+        blog: data.blog,
+        company: data.company,
+      };
+      saveData(dataObj);
       setUsername("");
     }
   }
