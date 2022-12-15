@@ -8,17 +8,17 @@ const Header = () => {
   const [darkMode, toggleDarkMode] = useDarkMode();
 
   return (
-    <div className="container">
-      <h1>devfinder</h1>
+    <div className='container'>
+      <h1 className='logo'>devfinder</h1>
       <button
-        id="mode-btn"
-        className="mode-btn"
+        id='mode-btn'
+        className='mode-btn'
         onClick={() => toggleDarkMode()}>
-        <p>{darkMode ? "Dark" : "Light"}</p>
+        <p className='current-mode'>{darkMode ? "Dark" : "Light"}</p>
         <img
           src={darkMode ? moon : sun}
-          alt="mode-icon"
-          className="mode-icon"
+          alt='mode-icon'
+          className='mode-icon'
         />
       </button>
     </div>
