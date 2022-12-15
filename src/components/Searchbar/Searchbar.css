@@ -61,3 +61,26 @@
   transform: translateY(-50%);
   right: 140px;
 }
+
+@media screen and (max-width: 800px) {
+  .searchbar-container {
+    width: 573px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .searchbar-container {
+    width: 327px;
+  }
+  .searchbar-icon {
+    width: 20.05px;
+    left: 16px;
+  }
+  .searchbar-input {
+    font-size: 13px;
+    padding: 20px 98px 20px 45px;
+  }
+  .searchbar-btn {
+    padding: 12.5px 16px;
+  }
+}

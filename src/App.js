@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Header />
       <Searchbar saveData={saveData} />
-      <Usercard data={data} />
+      <Usercard saveData={saveData} data={data} />
     </div>
   );
 }

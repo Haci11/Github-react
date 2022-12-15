@@ -1,0 +1,156 @@
+.usercard-container {
+  width: 730px;
+  height: 444px;
+  background-color: var(--background-card);
+  border-radius: 15px;
+  padding: 2rem;
+  display: grid;
+  grid-template-areas:
+    "img head head"
+    "img body body"
+    "img footer footer";
+}
+.usercard-head {
+  grid-area: head;
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "name  joined"
+    "login .";
+}
+.head-name {
+  grid-area: name;
+  color: var(--dark-text);
+  font-weight: 700;
+  font-size: 26px;
+}
+.head-joined {
+  grid-area: joined;
+  color: var(--text);
+  font-weight: 400;
+  font-size: 15px;
+}
+.head-login {
+  grid-area: login;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--btn);
+}
+
+.usercard-bio {
+  width: 100%;
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+.usercard-body {
+  grid-area: body;
+}
+.usercard-repo {
+  display: flex;
+  background-color: var(--background-color-gray);
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.repo-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--text);
+}
+.repo-text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 33px;
+  color: var(--dark-text);
+}
+.usercard-footer {
+  grid-area: footer;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.footer-info {
+  display: flex;
+  align-items: flex-start;
+  width: 50%;
+}
+.footer-icon {
+  padding-right: 1rem;
+  color: var(--text);
+}
+.usercard-img {
+  grid-area: img;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+.footer-text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--text);
+}
+
+@media screen and (max-width: 800px) {
+  .usercard-container {
+    width: 573px;
+    grid-template-areas:
+      "img head"
+      "body body"
+      "footer footer";
+  }
+  .usercard-head {
+    grid-template-areas:
+      "name"
+      "login"
+      "joined";
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .usercard-container {
+    width: 327px;
+    grid-template-areas:
+      "img head"
+      "body body"
+      "footer footer";
+    grid-auto-columns: 1fr;
+    min-height: 520px;
+  }
+  .usercard-footer {
+    flex-direction: column;
+  }
+  .footer-info {
+    padding-top: 1rem;
+  }
+  .usercard-bio {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .usercard-img {
+    width: 70px;
+    height: 70px;
+    margin-right: 0;
+  }
+
+  .head-name {
+    font-size: 16px;
+  }
+  .head-joined {
+    font-size: 11px;
+    line-height: 19px;
+  }
+  .head-login {
+    font-size: 13px;
+  }
+}
